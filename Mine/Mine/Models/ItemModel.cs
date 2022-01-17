@@ -5,7 +5,12 @@ namespace Mine.Models
     public class ItemModel
     {
         public string Id { get; set; }
+        
         public string Text { get; set; }
+
         public string Description { get; set; }
+
+        // The Value if the Item is +9 Damage
+        public int Value { get; set; } = 0;
     }
 }
