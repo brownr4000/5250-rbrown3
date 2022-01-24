@@ -22,7 +22,7 @@ namespace Mine.Services
         // The ReadAsync method
         Task<T> ReadAsync(string id);
 
-        // The GetItemsAsync method
-        Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
+        // The IndexAsync method
+        Task<IEnumerable<T>> IndexAsync(bool forceRefresh = false);
     }
 }

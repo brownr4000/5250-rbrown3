@@ -79,11 +79,11 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The GetItemsAsync method retrieves an ItemModel from the MockDataStore object when there is no forceRefresh
+        /// The IndexAsync method retrieves an ItemModel from the MockDataStore object when there is no forceRefresh
         /// </summary>
         /// <param name="forceRefresh"></param>
         /// <returns></returns>
-        public async Task<IEnumerable<ItemModel>> GetItemsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
         }
