@@ -10,18 +10,24 @@ using Mine.Views;
 
 namespace Mine.ViewModels
 {
+    /// <summary>
+    /// The ItemsVieweModel defines the ItemView, and is an extension of the BaseViewModel
+    /// </summary>
     public class ItemsViewModel : BaseViewModel
     {
         public ObservableCollection<ItemModel> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
+        /// <summary>
+        /// The ItemsViewModel Constructor
+        /// </summary>
         public ItemsViewModel()
         {
             Title = "Items";
             Items = new ObservableCollection<ItemModel>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            MessagingCenter.Subscribe<NewItemPage, ItemModel>(this, "AddItem", async (obj, item) =>
+            MessagingCenter.Subscribe<ItemCreatePage, ItemModel>(this, "AddItem", async (obj, item) =>
             {
                 var newItem = item as ItemModel;
                 Items.Add(newItem);
@@ -29,6 +35,10 @@ namespace Mine.ViewModels
             });
         }
 
+        /// <summary>
+        /// The ExecuteLoadItemsComand performs actions when an item is loaded
+        /// </summary>
+        /// <returns></returns>
         async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)

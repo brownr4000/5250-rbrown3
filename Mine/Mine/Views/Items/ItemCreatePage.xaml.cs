@@ -9,18 +9,18 @@ using Mine.Models;
 namespace Mine.Views
 {
     /// <summary>
-    /// The NewItemPage class provides the framework to create new item objects
+    /// The ItemCreatePage class provides the framework to create new item objects
     /// </summary>
     [DesignTimeVisible(false)]
-    public partial class NewItemPage : ContentPage
+    public partial class ItemCreatePage : ContentPage
     {
         // The ItemModel Item method
         public ItemModel Item { get; set; }
 
         /// <summary>
-        /// The New Item Page Constructor
+        /// The ItemCreatePage Constructor
         /// </summary>
-        public NewItemPage()
+        public ItemCreatePage()
         {
             InitializeComponent();
 
