@@ -8,21 +8,29 @@ using Mine.ViewModels;
 
 namespace Mine.Views
 {
-    // Learn more about making custom code visible in the Xamarin.Forms previewer
-    // by visiting https://aka.ms/xamarinforms-previewer
+    /// <summary>
+    /// The ItemReadPage class defines the code behind for the IteReadPage xaml
+    /// </summary>
     [DesignTimeVisible(false)]
-    public partial class ItemDetailPage : ContentPage
+    public partial class ItemReadPage : ContentPage
     {
         ItemDetailViewModel viewModel;
 
-        public ItemDetailPage(ItemDetailViewModel viewModel)
+        /// <summary>
+        /// The ItemReadPage Constructor takes an ItemDetailViewModel object and displays it on the ItemReadPage
+        /// </summary>
+        /// <param name="viewModel"></param>
+        public ItemReadPage(ItemDetailViewModel viewModel)
         {
             InitializeComponent();
 
             BindingContext = this.viewModel = viewModel;
         }
 
-        public ItemDetailPage()
+        /// <summary>
+        /// The ItemReadPage Default Constructor
+        /// </summary>
+        public ItemReadPage()
         {
             InitializeComponent();
 
