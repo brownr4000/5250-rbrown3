@@ -30,11 +30,11 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The AddItemAsync method adds an item to the MockDataStore object
+        /// The CreateAsync method adds an item to the MockDataStore object
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public async Task<bool> AddItemAsync(ItemModel item)
+        public async Task<bool> CreateAsync(ItemModel item)
         {
             items.Add(item);
 

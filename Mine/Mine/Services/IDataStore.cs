@@ -10,8 +10,8 @@ namespace Mine.Services
     /// <typeparam name="T"></typeparam>
     public interface IDataStore<T>
     {
-        // The AddItemAsync method
-        Task<bool> AddItemAsync(T item);
+        // The CreateAsync method
+        Task<bool> CreateAsync(T item);
 
         // The UpdateItemAsync mewthod
         Task<bool> UpdateItemAsync(T item);
