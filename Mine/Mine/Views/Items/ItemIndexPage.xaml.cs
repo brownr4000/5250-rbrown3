@@ -19,7 +19,7 @@ namespace Mine.Views
     [DesignTimeVisible(false)]
     public partial class ItemIndexPage : ContentPage
     {
-        ItemsViewModel viewModel;
+        ItemIndexViewModel viewModel;
 
         /// <summary>
         /// The ItemIndexPage Constructor
@@ -28,7 +28,7 @@ namespace Mine.Views
         {
             InitializeComponent();
 
-            BindingContext = viewModel = new ItemsViewModel();
+            BindingContext = viewModel = new ItemIndexViewModel();
         }
 
         /// <summary>

@@ -11,17 +11,17 @@ using Mine.Views;
 namespace Mine.ViewModels
 {
     /// <summary>
-    /// The ItemsVieweModel defines the ItemView, and is an extension of the BaseViewModel
+    /// The ItemIndexViewModel defines the ItemView, and is an extension of the BaseViewModel
     /// </summary>
-    public class ItemsViewModel : BaseViewModel
+    public class ItemIndexViewModel : BaseViewModel
     {
         public ObservableCollection<ItemModel> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
         /// <summary>
-        /// The ItemsViewModel Constructor
+        /// The ItemIndexViewModel Constructor
         /// </summary>
-        public ItemsViewModel()
+        public ItemIndexViewModel()
         {
             Title = "Items";
             Items = new ObservableCollection<ItemModel>();
