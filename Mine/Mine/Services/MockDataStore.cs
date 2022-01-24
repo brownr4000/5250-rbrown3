@@ -69,17 +69,17 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The GetItemAsync method retrieves an ItemModel from the MockDataStore object
+        /// The ReadAsync method retrieves an ItemModel from the MockDataStore object
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<ItemModel> GetItemAsync(string id)
+        public async Task<ItemModel> ReadAsync(string id)
         {
             return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
         }
 
         /// <summary>
-        /// The GetItemAsync method retrieves an ItemModel from the MockDataStore object when there is no forceRefresh
+        /// The GetItemsAsync method retrieves an ItemModel from the MockDataStore object when there is no forceRefresh
         /// </summary>
         /// <param name="forceRefresh"></param>
         /// <returns></returns>
