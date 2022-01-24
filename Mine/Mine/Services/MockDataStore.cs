@@ -56,11 +56,11 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The DeleteItemAsync method deletes an item from the MockDataStore object
+        /// The DeleteAsync method deletes an item from the MockDataStore object
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
-        public async Task<bool> DeleteItemAsync(string id)
+        public async Task<bool> DeleteAsync(string id)
         {
             var oldItem = items.Where((ItemModel arg) => arg.Id == id).FirstOrDefault();
             items.Remove(oldItem);

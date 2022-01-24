@@ -16,8 +16,8 @@ namespace Mine.Services
         // The UpdateAsync mewthod
         Task<bool> UpdateAsync(T item);
         
-        // The DeleteItemAsync method
-        Task<bool> DeleteItemAsync(string id);
+        // The DeleteAsync method
+        Task<bool> DeleteAsync(string id);
 
         // The ReadAsync method
         Task<T> ReadAsync(string id);
