@@ -14,13 +14,13 @@ namespace Mine.Views
     [DesignTimeVisible(false)]
     public partial class ItemReadPage : ContentPage
     {
-        ItemDetailViewModel viewModel;
+        ItemReadViewModel viewModel;
 
         /// <summary>
         /// The ItemReadPage Constructor takes an ItemDetailViewModel object and displays it on the ItemReadPage
         /// </summary>
         /// <param name="viewModel"></param>
-        public ItemReadPage(ItemDetailViewModel viewModel)
+        public ItemReadPage(ItemReadViewModel viewModel)
         {
             InitializeComponent();
 
@@ -40,7 +40,7 @@ namespace Mine.Views
                 Description = "This is an item description."
             };
 
-            viewModel = new ItemDetailViewModel(item);
+            viewModel = new ItemReadViewModel(item);
             BindingContext = viewModel;
         }
     }
