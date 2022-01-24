@@ -42,11 +42,11 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The UpdateItem Async method changes a field in an ItemModel object stored in the MockDataStore object
+        /// The UpdateAsync method changes a field in an ItemModel object stored in the MockDataStore object
         /// </summary>
         /// <param name="item"></param>
         /// <returns></returns>
-        public async Task<bool> UpdateItemAsync(ItemModel item)
+        public async Task<bool> UpdateAsync(ItemModel item)
         {
             var oldItem = items.Where((ItemModel arg) => arg.Id == item.Id).FirstOrDefault();
             items.Remove(oldItem);

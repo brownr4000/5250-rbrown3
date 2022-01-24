@@ -13,8 +13,8 @@ namespace Mine.Services
         // The CreateAsync method
         Task<bool> CreateAsync(T item);
 
-        // The UpdateItemAsync mewthod
-        Task<bool> UpdateItemAsync(T item);
+        // The UpdateAsync mewthod
+        Task<bool> UpdateAsync(T item);
         
         // The DeleteItemAsync method
         Task<bool> DeleteItemAsync(string id);
