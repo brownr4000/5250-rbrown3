@@ -28,6 +28,7 @@ namespace Mine.ViewModels
             DataSet = new ObservableCollection<ItemModel>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
+            // Looking for an "AddItem" message
             MessagingCenter.Subscribe<ItemCreatePage, ItemModel>(this, "AddItem", async (obj, item) =>
             {
                 var newItem = item as ItemModel;
@@ -35,6 +36,7 @@ namespace Mine.ViewModels
                 await DataStore.CreateAsync(newItem);
             });
 
+            // Looking for an "DeleteItem" message
             MessagingCenter.Subscribe<ItemDeletePage, ItemModel>(this, "DeleteItem", async (obj, item) =>
             {
                 var data = item as ItemModel;
