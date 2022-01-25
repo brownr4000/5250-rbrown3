@@ -34,6 +34,13 @@ namespace Mine.ViewModels
                 DataSet.Add(newItem);
                 await DataStore.CreateAsync(newItem);
             });
+
+            MessagingCenter.Subscribe<ItemDeletePage, ItemModel>(this, "DeleteItem", async (obj, item) =>
+            {
+                var data = item as ItemModel;
+                
+                await DeleteAsync(data);
+            });
         }
 
         /// <summary>
@@ -83,7 +90,7 @@ namespace Mine.ViewModels
         /// </summary>
         /// <param name="data">The Record to Delete</param>
         /// <returns>True if Deleted</returns>
-        public async Task<bool> DeleteSync (ItemModel data)
+        public async Task<bool> DeleteAsync (ItemModel data)
         {
             // Get record
             var record = await ReadAsync(data.Id);
