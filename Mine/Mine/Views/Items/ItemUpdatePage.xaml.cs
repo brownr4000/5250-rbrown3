@@ -9,7 +9,7 @@ using Mine.Models;
 namespace Mine.Views
 {
     /// <summary>
-    /// The ItemCreatePage class provides the framework to create new item objects
+    /// The ItemUpdatePage class provides the framework to update item objects
     /// </summary>
     [DesignTimeVisible(false)]
     public partial class ItemUpdatePage : ContentPage
@@ -18,7 +18,7 @@ namespace Mine.Views
         public ItemModel Item { get; set; }
 
         /// <summary>
-        /// The ItemCreatePage Constructor
+        /// The ItemUpdatePage Constructor
         /// </summary>
         public ItemUpdatePage()
         {
