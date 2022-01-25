@@ -43,5 +43,30 @@ namespace Mine.Views
             viewModel = new ItemReadViewModel(item);
             BindingContext = viewModel;
         }
+
+        /// <summary>
+        /// The DeleteItem_Clicked method deletes the iteon on the page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void DeleteItem_Clicked(object sender, EventArgs e)
+        {
+            // Displays message to screen
+            MessagingCenter.Send(this, "DeleteItem", viewModel.Item);
+
+            // Pops the current page from the Nagivation stack
+            await Navigation.PopModalAsync();
+        }
+
+        /// <summary>
+        /// The CancelItem_Clicked method cancels the page
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public async void CancelItem_Clicked(object sender, EventArgs e)
+        {
+            // Pops the current page from the Nagivation stack
+            await Navigation.PopModalAsync();
+        }
     }
 }
