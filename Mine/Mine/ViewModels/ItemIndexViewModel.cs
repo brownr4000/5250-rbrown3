@@ -38,7 +38,7 @@ namespace Mine.ViewModels
         /// <summary>
         /// The ExecuteLoadItemsComand performs actions when an item is loaded
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Empty</returns>
         async Task ExecuteLoadItemsCommand()
         {
             if (IsBusy)
@@ -63,6 +63,18 @@ namespace Mine.ViewModels
             {
                 IsBusy = false;
             }
+        }
+
+        /// <summary>
+        /// The ReadAsync method reads an item from the datastore
+        /// </summary>
+        /// <param name="id">THe ID of the reccord</param>
+        /// <returns>The Record from ReadAsync</returns>
+        public async Task<ItemModel> ReadAsync(string id)
+        {
+            var result = await DataStore.ReadAsync(id);
+
+            return result;
         }
     }
 }
