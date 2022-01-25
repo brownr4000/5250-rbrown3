@@ -77,5 +77,30 @@ namespace Mine.ViewModels
 
             return result;
         }
+
+        /// <summary>
+        /// The DeleteSync method deletes a record from the system
+        /// </summary>
+        /// <param name="data">The Record to Delete</param>
+        /// <returns>True if Deleted</returns>
+        public async Task<bool> DeleteSync (ItemModel data)
+        {
+            // Get record
+            var record = await ReadAsync(data.Id);
+
+            // Check if record exists, if it does not, then null is returned
+            if (record == null)
+            {
+                return false;
+            }
+
+            // Remove from the local data set cache
+            DataSet.Remove(data);
+
+            // Call to remove it from the Data Store
+            var result = await DataStore.DeleteAsync(data.Id);
+
+            return result;
+        }
     }
 }
