@@ -9,7 +9,7 @@ using Mine.ViewModels;
 namespace Mine.Views
 {
     /// <summary>
-    /// The ItemReadPage class defines the code behind for the IteReadPage xaml
+    /// The ItemDeletePage class defines the code behind for the IteReadPage xaml
     /// </summary>
     [DesignTimeVisible(false)]
     public partial class ItemDeletePage : ContentPage
@@ -17,9 +17,9 @@ namespace Mine.Views
         ItemReadViewModel viewModel;
 
         /// <summary>
-        /// The ItemReadPage Constructor takes an ItemDetailViewModel object and displays it on the ItemReadPage
+        /// The ItemDeletePage Constructor takes an ItemDetailViewModel object and displays it on the ItemReadPage
         /// </summary>
-        /// <param name="viewModel"></param>
+        /// <param name="viewModel">The viewMode to display</param>
         public ItemDeletePage(ItemReadViewModel viewModel)
         {
             InitializeComponent();
@@ -28,7 +28,7 @@ namespace Mine.Views
         }
 
         /// <summary>
-        /// The ItemReadPage Default Constructor
+        /// The ItemDeletePage Default Constructor
         /// </summary>
         public ItemDeletePage()
         {
