@@ -9,7 +9,7 @@ using Mine.Models;
 namespace Mine.Services
 {
     /// <summary>
-    /// The Database Service class
+    /// The Database Service class controls how the database interacts with the other pages
     /// </summary>
     public class DatabaseService : IDataStore<ItemModel> 
     {
@@ -60,9 +60,15 @@ namespace Mine.Services
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
+        /// <summary>
+        /// The IndexAsync method displays the whole table from the database
+        /// </summary>
+        /// <param name="forceRefresh"></param>
+        /// <returns>The result from the Database table</returns>
+        public async Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
         {
-            throw new NotImplementedException();
+            var result = await Database.Table<ItemModel>().ToListAsync();
+            return result;
         }
     }
 }
