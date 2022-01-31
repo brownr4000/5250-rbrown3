@@ -23,7 +23,7 @@ namespace Mine.Services
 
         public DatabaseService()
         {
-            InitalizeAsync().SafeFireAndForget(false);
+            InitializeAsync().SafeFireAndForget(false);
         }
 
         async Task InitializeAsync()
