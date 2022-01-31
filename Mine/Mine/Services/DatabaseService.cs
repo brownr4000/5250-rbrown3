@@ -41,7 +41,7 @@ namespace Mine.Services
         }
 
         /// <summary>
-        /// The CreateAsync method adds and inserts data into the database
+        /// The CreateAsync method adds and inserts ItemModel objects into the database
         /// </summary>
         /// <param name="item"></param>
         /// <returns>True if the item is added to the database</returns>
@@ -72,9 +72,23 @@ namespace Mine.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// The ReadAsync method takes and item ID and returns the ItemModel
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns>The ItemModel being read</returns>
         public Task<ItemModel> ReadAsync(string id)
         {
-            throw new NotImplementedException();
+            if (id == null)
+            {
+                return null;
+            }
+
+            // Call the Database to read the ID
+            // Using Linq syntax, Find the first record that has the ID that matches
+            var result = Database.Table<ItemModel>().FirstOrDefaultAsync(m => m.Id.Equals(id));
+
+            return result;
         }
 
         /// <summary>
