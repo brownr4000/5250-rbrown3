@@ -8,7 +8,7 @@ namespace Mine.Models
     /// </summary>
     public class ItemModel
     {
-        // The Id for the Item
+        // The Id for the Item using Guid
         [PrimaryKey]
         public string Id { get; set; } = Guid.NewGuid().ToString();
         
