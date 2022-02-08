@@ -138,7 +138,7 @@ namespace UnitTests.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Tests that a ten-sided die forced to a value of 5 and rolled 3 times returns a value of 15
         /// </summary>
         [Test]
         public void RollDice_Valid_Roll_3_Dice_10_Fixed_5_Should_Return_15()
