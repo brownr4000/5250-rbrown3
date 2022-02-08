@@ -3,9 +3,15 @@ using Mine.Models;
 
 namespace UnitTests.Models
 {
+    /// <summary>
+    /// The ItemModelTests class is the structure for Unit Tests of the ItemModel class
+    /// </summary>
     [TestFixture]
     public class ItemModelTests
     {
+        /// <summary>
+        /// Tests the default ItemModel Constructor
+        /// </summary>
         [Test]
         public void ItemModel_Constructor_Valid_Default_Should_Pass()
         {
@@ -20,6 +26,9 @@ namespace UnitTests.Models
             Assert.IsNotNull(result);
         }
 
+        /// <summary>
+        /// Tests the get and set of the attributes of the  ItemModel object
+        /// </summary>
         [Test]
         public void ItemModel_Set_Get_Valid_Default_Should_Pass()
         {
@@ -41,6 +50,9 @@ namespace UnitTests.Models
             Assert.AreEqual(1, result.Value);
         }
 
+        /// <summary>
+        /// Tests the default value of the ItemModel class object
+        /// </summary>
         [Test]
         public void ItemModel_Get_Valid_Default_Should_Pass()
         {
