@@ -84,7 +84,7 @@ namespace UnitTests.Helpers
         }
 
         /// <summary>
-        /// 
+        /// Test to check that a ten-sided die rolled zero times returns 0
         /// </summary>
         [Test]
         public void RollDice_InValid_Roll_0_Dice_10_Should_Return_Zero()
@@ -100,5 +100,21 @@ namespace UnitTests.Helpers
             Assert.AreEqual(0, result);
         }
 
+        /// <summary>
+        /// Test to check that a zero-sided die rolled one times returns 0
+        /// </summary>
+        [Test]
+        public void RollDice_InValid_Roll_1_Dice_0_Should_Return_Zero()
+        {
+            // Arrange
+
+            // Act
+            var result = DiceHelper.RollDice(1, 0);
+
+            // Reset
+
+            // Assert
+            Assert.AreEqual(0, result);
+        }
     }
 }
